@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 
 describe "Pets Controller" do
   describe "new action" do
@@ -29,6 +30,7 @@ describe "Pets Controller" do
 
 
     it "creates a new pet and associates an existing owner" do
+      # binding.pry
       @owner1 = Owner.create(:name => "Cricky")
       @owner2 = Owner.create(:name => "Chris")
       visit '/pets/new'
